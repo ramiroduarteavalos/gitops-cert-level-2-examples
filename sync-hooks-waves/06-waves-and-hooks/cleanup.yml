@@ -4,7 +4,8 @@ metadata:
   namespace: example06
   generateName: cleanup-after-sync-
   annotations:
-    argocd.argoproj.io/hook: Sync
+    argocd.argoproj.io/hook: PreSync
+    argocd.argoproj.io/sync-wave: "20"
   labels:
     codefresh.io/cert: cleanup-job  
 spec:
